@@ -1,0 +1,178 @@
+{
+  "label": "SYNTHETIC PORTFOLIO EXERCISE",
+  "seed": 20261125,
+  "protocol_sha256": "32e581f485e9e86c70ae1153476ae7bb111b58867cadde7a42ca4a2a4a50e565",
+  "scenarios": {
+    "main_conflict": {
+      "metrics": {
+        "retention_w4": {
+          "label": "Week-four workout retention",
+          "control_count": 4534,
+          "control_n": 20000,
+          "treatment_count": 3978,
+          "treatment_n": 20000,
+          "control_pct": 22.67,
+          "treatment_pct": 19.89,
+          "difference_pp": -2.780000000000002,
+          "ci_low_pp": -3.5815335453406183,
+          "ci_high_pp": -1.9780838769719409
+        },
+        "first_workout_d7": {
+          "label": "First workout by day 7",
+          "control_count": 12004,
+          "control_n": 20000,
+          "treatment_count": 13251,
+          "treatment_n": 20000,
+          "control_pct": 60.019999999999996,
+          "treatment_pct": 66.255,
+          "difference_pp": 6.235000000000001,
+          "ci_low_pp": 5.290720198997481,
+          "ci_high_pp": 7.17771286600018
+        },
+        "paid_d28": {
+          "label": "Paid conversion by day 28",
+          "control_count": 1208,
+          "control_n": 20000,
+          "treatment_count": 1222,
+          "treatment_n": 20000,
+          "control_pct": 6.04,
+          "treatment_pct": 6.11,
+          "difference_pp": 0.06999999999999992,
+          "ci_low_pp": -0.3984147209587326,
+          "ci_high_pp": 0.5384599244513115
+        },
+        "error_d7": {
+          "label": "Onboarding error by day 7",
+          "control_count": 316,
+          "control_n": 20000,
+          "treatment_count": 299,
+          "treatment_n": 20000,
+          "control_pct": 1.58,
+          "treatment_pct": 1.4949999999999999,
+          "difference_pp": -0.08500000000000019,
+          "ci_low_pp": -0.3270115203063772,
+          "ci_high_pp": 0.15667806121814812
+        }
+      },
+      "prompt_seen": {
+        "onboarding": 20000,
+        "after_workout": 13758
+      },
+      "decision": "RETAIN_CURRENT_RETENTION_HARM"
+    },
+    "null": {
+      "metrics": {
+        "retention_w4": {
+          "label": "Week-four workout retention",
+          "control_count": 4534,
+          "control_n": 20000,
+          "treatment_count": 4516,
+          "treatment_n": 20000,
+          "control_pct": 22.67,
+          "treatment_pct": 22.58,
+          "difference_pp": -0.09000000000000119,
+          "ci_low_pp": -0.9100356950576141,
+          "ci_high_pp": 0.7300496764571266
+        },
+        "first_workout_d7": {
+          "label": "First workout by day 7",
+          "control_count": 12004,
+          "control_n": 20000,
+          "treatment_count": 12056,
+          "treatment_n": 20000,
+          "control_pct": 60.019999999999996,
+          "treatment_pct": 60.28,
+          "difference_pp": 0.26000000000000467,
+          "ci_low_pp": -0.6995237145178391,
+          "ci_high_pp": 1.2194561382868385
+        },
+        "paid_d28": {
+          "label": "Paid conversion by day 28",
+          "control_count": 1208,
+          "control_n": 20000,
+          "treatment_count": 1222,
+          "treatment_n": 20000,
+          "control_pct": 6.04,
+          "treatment_pct": 6.11,
+          "difference_pp": 0.06999999999999992,
+          "ci_low_pp": -0.3984147209587326,
+          "ci_high_pp": 0.5384599244513115
+        },
+        "error_d7": {
+          "label": "Onboarding error by day 7",
+          "control_count": 316,
+          "control_n": 20000,
+          "treatment_count": 299,
+          "treatment_n": 20000,
+          "control_pct": 1.58,
+          "treatment_pct": 1.4949999999999999,
+          "difference_pp": -0.08500000000000019,
+          "ci_low_pp": -0.3270115203063772,
+          "ci_high_pp": 0.15667806121814812
+        }
+      },
+      "prompt_seen": {
+        "onboarding": 20000,
+        "after_workout": 12660
+      },
+      "decision": "RETAIN_CURRENT_MORE_EVIDENCE"
+    },
+    "aligned_benefit": {
+      "metrics": {
+        "retention_w4": {
+          "label": "Week-four workout retention",
+          "control_count": 4534,
+          "control_n": 20000,
+          "treatment_count": 5180,
+          "treatment_n": 20000,
+          "control_pct": 22.67,
+          "treatment_pct": 25.900000000000002,
+          "difference_pp": 3.2299999999999995,
+          "ci_low_pp": 2.389895454493785,
+          "ci_high_pp": 4.069543498865831
+        },
+        "first_workout_d7": {
+          "label": "First workout by day 7",
+          "control_count": 12004,
+          "control_n": 20000,
+          "treatment_count": 13251,
+          "treatment_n": 20000,
+          "control_pct": 60.019999999999996,
+          "treatment_pct": 66.255,
+          "difference_pp": 6.235000000000001,
+          "ci_low_pp": 5.290720198997481,
+          "ci_high_pp": 7.17771286600018
+        },
+        "paid_d28": {
+          "label": "Paid conversion by day 28",
+          "control_count": 1208,
+          "control_n": 20000,
+          "treatment_count": 1222,
+          "treatment_n": 20000,
+          "control_pct": 6.04,
+          "treatment_pct": 6.11,
+          "difference_pp": 0.06999999999999992,
+          "ci_low_pp": -0.3984147209587326,
+          "ci_high_pp": 0.5384599244513115
+        },
+        "error_d7": {
+          "label": "Onboarding error by day 7",
+          "control_count": 316,
+          "control_n": 20000,
+          "treatment_count": 299,
+          "treatment_n": 20000,
+          "control_pct": 1.58,
+          "treatment_pct": 1.4949999999999999,
+          "difference_pp": -0.08500000000000019,
+          "ci_low_pp": -0.3270115203063772,
+          "ci_high_pp": 0.15667806121814812
+        }
+      },
+      "prompt_seen": {
+        "onboarding": 20000,
+        "after_workout": 13758
+      },
+      "decision": "SIMULATED_ROLLOUT"
+    }
+  }
+}

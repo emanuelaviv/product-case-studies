@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Fresh deterministic rerun matches numeric outputs and account CSV byte for byte",
+    "CSV-derived estimates agree with JSON; 40,000 unique accounts and 20,000 per arm",
+    "Independent SQLite metric query matches all eight event counts and denominators",
+    "All 6,242 unexposed treatment accounts remain included",
+    "Interval cross-check within 0.02 pp; zero-event boundary retains uncertainty",
+    "Conflicting, null, aligned-benefit, guardrail-harm and uncertain-guardrail decisions checked",
+    "Editable memo contains every calculated difference and interval",
+    "One-page PDF contains every calculated difference, interval and synthetic label"
+  ],
+  "decisions": {
+    "main_conflict": "RETAIN_CURRENT_RETENTION_HARM",
+    "null": "RETAIN_CURRENT_MORE_EVIDENCE",
+    "aligned_benefit": "SIMULATED_ROLLOUT"
+  },
+  "protocol_sha256": "32e581f485e9e86c70ae1153476ae7bb111b58867cadde7a42ca4a2a4a50e565"
+}

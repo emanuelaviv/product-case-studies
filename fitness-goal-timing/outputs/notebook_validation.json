@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "executed_code_cells": 7,
+  "errors": 0,
+  "schema": "nbformat 4",
+  "execution_method": "Fresh in-process IPython shell, sequential notebook cells; no Jupyter server or socket-based kernel",
+  "embedded_chart": true
+}

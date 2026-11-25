@@ -1,0 +1,48 @@
+{
+  "label": "SYNTHETIC PORTFOLIO EXERCISE",
+  "version": "1.0",
+  "frozen_before_first_simulation": true,
+  "seed": 20261125,
+  "accounts_per_arm": 20000,
+  "allocation": "Complete randomization, fixed equal allocation, shuffled account IDs before onboarding",
+  "primary": "Any completed workout in elapsed days 22-28 after assignment, inclusive",
+  "diagnostic": "First completed workout by elapsed day 7, inclusive",
+  "paid_guardrail": "Any first paid conversion by elapsed day 28",
+  "error_guardrail": "Any logged onboarding error in elapsed days 0-7",
+  "retention_minimum_worthwhile_lift_pp": 1.5,
+  "paid_noninferiority_margin_pp": -1.0,
+  "error_noninferiority_margin_pp": 0.5,
+  "confidence_level": 0.95,
+  "ci_method": "Newcombe difference of independent Wilson score intervals, uncorrected",
+  "decision_order": [
+    "If retention upper CI < 0, retain current timing due to retention harm",
+    "If paid upper CI < -1.0pp or error lower CI > 0.5pp, retain current timing due to guardrail harm",
+    "If retention point estimate >= 1.5pp AND lower CI > 0 AND paid lower CI > -1.0pp AND error upper CI < 0.5pp, recommend simulated rollout",
+    "Otherwise retain current timing pending more evidence or a revised design"
+  ],
+  "control": {"first_workout_by7": 0.60, "week4_given_early": 0.36},
+  "scenarios": {
+    "main_conflict": {"first_workout_by7": 0.66, "week4_given_early": 0.29},
+    "null": {"first_workout_by7": 0.60, "week4_given_early": 0.36},
+    "aligned_benefit": {"first_workout_by7": 0.66, "week4_given_early": 0.38}
+  },
+  "shared": {
+    "late_first_workout_if_no_early": 0.08,
+    "week4_given_late": 0.25,
+    "paid_by28": 0.06,
+    "onboarding_error_by7": 0.015
+  },
+  "scope": "Hypothetical consumer fitness app. Same optional weekly goal prompt, wording and skip option. Control sees prompt on onboarding day 0; treatment sees it just after the first completed workout. Assignment is permanent. Goal capture is disconnected from workout selection and other features in both arms.",
+  "assumptions": [
+    "40,000 distinct eligible new accounts have completed 28 days of follow-up; no bot, employee or repeat-account exclusions are made after assignment.",
+    "All account assignment and outcome logging is complete. Accounts without a workout remain in the denominator with retention=0.",
+    "No interference across accounts; repeated devices resolve to the same account. All assigned accounts open onboarding and the control prompt is rendered.",
+    "Among accounts without an early first workout, 8% first complete one on days 8-21; otherwise there is no workout by day 28. This simplification omits first-ever workouts on days 22-28.",
+    "Workout outcomes are linked through early/late first-workout status. Payment and error outcomes are independent Bernoulli draws, a deliberate simplification rather than an empirical behavioural model.",
+    "Prompt seen is an exposure event, not evidence of accepting a goal. A late-retention difference does not establish a commitment mechanism.",
+    "Effect sizes, rates, sample size and thresholds are analyst-chosen educational assumptions and have no calibration to any real app, company or client data.",
+    "One fixed-horizon analysis after all follow-up. Diagnostic and sensitivity outcomes are descriptive. The rollout rule is a conjunction of prespecified requirements, with no fishing among metrics.",
+    "The same frozen random draws are reused across sensitivity scenarios for comparison; scenarios are alternative data-generating assumptions, not independent experiments. No seed search or rerolling.",
+    "Intervals quantify random sampling variation inside the synthetic model; they do not quantify uncertainty about real users."
+  ]
+}

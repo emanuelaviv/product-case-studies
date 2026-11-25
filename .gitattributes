@@ -1,0 +1,5 @@
+# Store and check out every file byte-for-byte as committed (no line-ending conversion),
+# so the checksums in each MANIFEST.sha256 and the reproducibility checks hold on every system.
+* -text
+*.png binary
+*.pdf binary
